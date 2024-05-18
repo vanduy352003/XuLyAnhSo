@@ -6,10 +6,10 @@ import numpy as np
 # Streamlit page configuration
 st.set_page_config(
     page_title="Nhận dạng trái cây",
-    page_icon="😉",
+    page_icon="🍓",
 )
 
-st.subheader('Nhận dạng trái cây')
+st.title('Nhận dạng trái cây')
 
 # Load model and classes
 model = 'utility/RecognitionFruit/trai_cay.onnx'
@@ -110,8 +110,6 @@ def postprocess(frame, outs):
         height = box[3]
         drawPred(classIds[i], confidences[i], left, top, left + width, top + height)
     return
-
-st.title('Fruit Detect Yolo8')
 
 img_file_buffer = st.file_uploader("Upload an image", type=["jpg", "tif", "bmp", "gif", "png"])
 

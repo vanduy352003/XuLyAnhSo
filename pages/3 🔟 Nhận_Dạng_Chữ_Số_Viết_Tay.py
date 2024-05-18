@@ -8,26 +8,7 @@ from tensorflow import keras
 from tensorflow.keras import datasets
 from tensorflow.keras.models import model_from_json, Sequential
 
-st.set_page_config(page_title="Nhận dạng chữ số viết tay", page_icon="📱")
-page_bg_img = """
-<style>
-[data-testid="stAppViewContainer"] {
-    background-image: url("");
-    background-size: 100% 100%;
-}
-[data-testid="stHeader"]{
-    background: rgba(0,0,0,0);
-}
-[data-testid="stToolbar"]{
-    right:2rem;
-}
-[data-testid="stSidebar"] > div:first-child {
-    background-image: url("https://i.pinimg.com/736x/1b/e2/91/1be2919a288c48fe59ba448f92898bcc.jpg");
-    background-position: center;
-}
-</style>
-"""
-st.markdown(page_bg_img, unsafe_allow_html=True)
+st.set_page_config(page_title="Nhận dạng chữ số viết tay", page_icon="🔟")
 
 st.title('Nhận dạng chữ số viết tay')
 

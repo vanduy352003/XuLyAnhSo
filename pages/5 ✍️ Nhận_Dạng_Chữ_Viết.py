@@ -6,6 +6,11 @@ import imutils
 import cv2
 from PIL import Image
 
+# Streamlit application
+st.set_page_config(page_title="Nhận dạng chữ viết tay", page_icon="✍️")
+st.title('Nhận dạng chữ viết tay')
+
+
 # Load the handwriting OCR model
 model = load_model("utility/RecognitionHandWrite/handwrite.h5")
 
@@ -82,10 +87,6 @@ def process_image(image):
         cv2.putText(image, label, (x - 10, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (255, 0, 0), 2)
 
     return image
-
-# Streamlit application
-st.title("Handwriting OCR with Streamlit")
-st.write("Upload an image of handwritten text to perform OCR.")
 
 # File uploader for images
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])

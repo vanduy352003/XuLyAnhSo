@@ -11,8 +11,7 @@ st.set_page_config(
     page_icon="😉",
 )
 
-st.subheader('Nhận dạng giới tính')
-st.image(Image.open('images/recognition_face.jpg'), width=700)
+st.title('Nhận dạng giới tính')
 FRAME_WINDOW = st.image([])
 
 # Initialize video capture
