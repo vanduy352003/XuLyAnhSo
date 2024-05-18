@@ -11,7 +11,7 @@ st.set_page_config(
     page_icon="😉",
 )
 
-st.subheader('Nhận dạng khuôn mặt')
+st.subheader('Nhận dạng giới tính')
 st.image(Image.open('images/recognition_face.jpg'), width=700)
 FRAME_WINDOW = st.image([])
 
