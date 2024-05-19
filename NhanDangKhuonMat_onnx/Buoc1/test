@@ -1,0 +1,30 @@
+import os
+
+# Define the directory containing the original files
+input_dir = '../image/BanDinh'
+output_dir = '../imgage/BanDinh1'
+
+# Ensure the output directory exists
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+# List all files in the input directory
+files = sorted(os.listdir(input_dir))
+
+# Rename each file according to the new pattern
+for idx, filename in enumerate(files):
+    # Construct the old file path
+    old_file_path = os.path.join(input_dir, filename)
+    
+    # Construct the new filename with the desired pattern
+    new_filename = 'Dinh_%04d.bmp' % idx
+    
+    # Construct the new file path
+    new_file_path = os.path.join(output_dir, new_filename)
+    
+    # Rename (or move) the file
+    os.rename(old_file_path, new_file_path)
+
+    print(f'Renamed: {old_file_path} to {new_file_path}')
+
+print("Renaming completed.")
